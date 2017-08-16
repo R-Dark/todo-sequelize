@@ -26,9 +26,11 @@
 
 <div class="">
   <h2>Completed Tasks</h2>
+  {{#completed}}
   <dl class="">
-    <dd>{{completed}}</dd>
+    <dd>{{.}}</dd>
   </dl>
+  {{/completed}}
 </div>
 
 </body>

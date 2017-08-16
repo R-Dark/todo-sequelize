@@ -26,6 +26,7 @@ app.get("/", function(require, response) {
 app.post("/", function(require, response) {
   todos.push(require.body.todos);
   response.redirect('/');
+
 })
 
 app.listen(3000, function() {
