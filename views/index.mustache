@@ -17,22 +17,31 @@
 
 <div id="myUl">
   <h2>Current Tasks</h2>
-    {{#todos}}
-    <ul>
-    <input class="checkbox" type="checkbox" name="checkTodo"> {{.}}</input>
-      </ul>
-    {{/todos}}
+  <form class="" action="/completed" method="post">
+
+
+  {{#todos}}
+
+          <button class= "completeButton" type="submit" name="button" value="{{.}}">Mark Complete</button>
+          <h3 class="todoItem">{{.}}</h3>
+
+  {{/todos}}
+  </form>
 </div>
 
 <div class="">
   <h2>Completed Tasks</h2>
   {{#completed}}
-  <dl class="">
-    <dd>{{.}}</dd>
-  </dl>
+    <dl class="">
+      <dd>{{.}}</dd>
+    </dl>
   {{/completed}}
 </div>
 
 </body>
 
 </html>
+
+<!-- <ul>
+  <input class="checkbox" type="checkbox" name="checkbox"> {{.}}</input>
+</ul> -->
