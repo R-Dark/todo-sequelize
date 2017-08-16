@@ -5,9 +5,7 @@ const bodyParser = require("body-parser")
 app.engine('mustache', mustache())
 app.set('view engine', 'mustache')
 app.use(express.static('public'))
-app.use(bodyParser.urlencoded({
-  extended: false
-}))
+app.use(bodyParser.urlencoded({ extended: false }))
 
 
 const todos = [
@@ -29,8 +27,6 @@ app.post("/", function(require, response) {
   todos.push(require.body.todos);
   response.redirect('/');
 })
-
-
 
 app.listen(3000, function() {
   console.log("Express started on port 3000")

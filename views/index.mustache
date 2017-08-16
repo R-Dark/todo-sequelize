@@ -10,16 +10,18 @@
 <div id="myDIV" class="header">
   <h1>Todo List</h1>
   <form class="" action="/" method="post">
-    <input type="text" value="{{todos}} "name="todos" id="myInput" placeholder="Todo...">
+    <input type="text" value="" name="todos" id="myInput" placeholder="Todo...">
     <input class="addBtn" type="submit" value="Submit">
   </form>
 </div>
 
 <div id="myUl">
   <h2>Current Tasks</h2>
-  <dl class="">
-    <dd>{{todos}}</dd>
-  </dl>
+    {{#todos}}
+    <ul>
+    <input class="checkbox" type="checkbox" name="checkTodo"> {{.}}</input>
+      </ul>
+    {{/todos}}
 </div>
 
 <div class="">
