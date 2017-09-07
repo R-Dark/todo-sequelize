@@ -17,8 +17,9 @@ router.post("/", function(req, res) {
   const todo = models.Todos.build({
     task: req.body.todo,
   })
-  todo.save().then(function(newTodo) {})
+  todo.save().then(function(newTodo) {
   res.redirect('/')
+  })
 })
 
 router.post("/completed", function(req, res) {
